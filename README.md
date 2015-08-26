@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-First, add malygos.yml in your rails project ``config/`` and add your s3 keys like this.
+First, add ``malygos.yml`` in your rails project ``config/`` and add your s3 keys like this.
 
 ```ruby
 access_key_id: YOUR_ACCESS_KEY
@@ -27,6 +27,11 @@ region: YOUR_S3_REGION
 bucket: YOUR_S3_BUCKET
 acl: ACL_YOU_WANT # like "public-read"
 ```
+
+And after, run ``rake malygos:sync`` or ``rake malygos:delete\_remote\_assets``.
+
+If you run ``rake malygos:sync``, Malygos upload your assets that not in remote s3.  
+and run ``rake malygos:delete\_remote\_assets``, delete all assets in remote s3.
 
 ## Contributing
 
